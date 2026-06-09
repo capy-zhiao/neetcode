@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($gitPath = \"C:\\\\Program Files\\\\Git\\\\cmd\"; if \\(Test-Path \"$gitPath\\\\git.exe\"\\) { $env:Path = \"$gitPath;$env:Path\"; git --version } else { Write-Output \"not at default path, searching...\"; Get-ChildItem \"C:\\\\Program Files\\\\Git\",\"$env:LOCALAPPDATA\\\\Programs\\\\Git\" -Filter git.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName })"
+    ]
+  }
+}

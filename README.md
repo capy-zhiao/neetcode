@@ -4,8 +4,8 @@
 
 ## 📚 分类导航
 
-- 📦 [数组与哈希（Arrays & Hashing）](./01_array&hashing.md) ⬅️ 进行中
-- 👣 [双指针（Two Pointers）](./02_two_pointers.md)
+- 📦 [数组与哈希（Arrays & Hashing）](./01_array&hashing.md) ✅ 已完成
+- 👣 [双指针（Two Pointers）](./02_two_pointers.md) ⬅️ 进行中
 - 🪟 [滑动窗口（Sliding Window）](./03_sliding_window.md)
 - 📐 [栈（Stack）](./04_stack.md)
 - 🔍 [二分查找（Binary Search）](./05_binary_search.md)
@@ -29,6 +29,7 @@
 
 | 分类 | 状态 |
 | --- | --- |
-| Arrays & Hashing | 🟡 进行中 |
+| Arrays & Hashing | 🟢 已完成 |
+| Two Pointers | 🟡 进行中 |
 
 ---

@@ -5,8 +5,8 @@
 ## 📚 分类导航
 
 - 📦 [数组与哈希（Arrays & Hashing）](./01_array&hashing.md) ✅ 已完成
-- 👣 [双指针（Two Pointers）](./02_two_pointers.md) ⬅️ 进行中
-- 🪟 [滑动窗口（Sliding Window）](./03_sliding_window.md)
+- 👣 [双指针（Two Pointers）](./02_two_pointers.md) ✅ 已完成
+- 🪟 [滑动窗口（Sliding Window）](./03_sliding_window.md) ⬅️ 进行中
 - 📐 [栈（Stack）](./04_stack.md)
 - 🔍 [二分查找（Binary Search）](./05_binary_search.md)
 - 🔗 [链表（Linked List）](./06_linked_list.md)
@@ -20,8 +20,8 @@
 - ⚡ [二维动态规划（2-D DP）](./14_2d_dp.md)
 - 🦊 [贪心（Greedy）](./15_greedy.md)
 - 📊 [区间（Intervals）](./16_intervals.md)
-- 🔢 [数学与几何（Math & Geometry）](./17_math_geometry.md)
-- 🧮 [位运算（Bit Manipulation）](./18_bit_manipulation.md)
+- 🧮 [位运算（Bit Manipulation）](./17_bit_manipulation.md)
+- 🔢 [数学与几何（Math & Geometry）](./18_math_geometry.md)
 
 ---
 
@@ -30,6 +30,7 @@
 | 分类 | 状态 |
 | --- | --- |
 | Arrays & Hashing | 🟢 已完成 |
-| Two Pointers | 🟡 进行中 |
+| Two Pointers | 🟢 已完成 |
+| Sliding Window | 🟡 进行中 |
 
 ---

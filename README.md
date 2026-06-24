@@ -1,7 +1,5 @@
 # NeetCode Roadmap 题解仓库 🧠
 
-跟着 [NeetCode.io Roadmap](https://neetcode.io/roadmap) 刷题，记录每道题的思路与解法。
-
 ## 📚 分类导航
 
 - 📦 [数组与哈希（Arrays & Hashing）](./01_array&hashing.md) ✅ 已完成

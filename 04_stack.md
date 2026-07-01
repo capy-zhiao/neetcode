@@ -47,7 +47,33 @@ def monotonic_stack(nums):
 **代码：**
 
 ```python
-# 待补充
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if len(s) % 2 == 1: return False
+
+        bracket = {'(':')', '{':'}', '[':']'}
+        flag = ['{', '(', '[']
+        stack = []
+
+        for i in s:
+            if i in flag:
+                stack.append(i)
+
+            else:
+                if not stack: 
+                    return False
+                elif i == bracket[stack[-1]]:
+                    stack.pop()
+                else:
+                    return False
+        
+        if not stack:
+            return True
+
+        else:
+            return False
+
+
 ```
 
 
@@ -61,13 +87,32 @@ def monotonic_stack(nums):
 **思路：**
 
 ```
-待补充
+remenber pop the minstack
 ```
 
 **代码：**
 
 ```python
-# 待补充
+class MinStack:
+
+    def __init__(self):
+        self.stack = []
+        self.minStack = []
+
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        val = min(val, self.minStack[-1] if self.minStack else val)
+        self.minStack.append(val)
+
+    def pop(self) -> None:
+        self.stack.pop()
+        self.minStack.pop()
+
+    def top(self) -> int:
+        return self.stack[-1]
+
+    def getMin(self) -> int:
+        return self.minStack[-1]
 ```
 
 
@@ -87,27 +132,26 @@ def monotonic_stack(nums):
 **代码：**
 
 ```python
-# 待补充
-```
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        tmp = deque()
 
+        for token in tokens:
+            if token in "+*-/":
+                b = tmp.pop()
+                print(f"a:{b}")
+                a = tmp.pop()
+                print(f"b:{a}")
 
+                if token == "+": tmp.append(a+b)
+                if token == "*": tmp.append(a*b)
+                if token == "-": tmp.append(a-b)
+                if token == "/": tmp.append(int(a/b))
 
----
+            else:
+                tmp.append(int(token))
 
-## 22. Generate Parentheses
-
-**链接：** https://neetcode.io/problems/generate-parentheses/question?list=neetcode150
-
-**思路：**
-
-```
-待补充
-```
-
-**代码：**
-
-```python
-# 待补充
+        return int(tmp[0])
 ```
 
 
@@ -121,13 +165,47 @@ def monotonic_stack(nums):
 **思路：**
 
 ```
-待补充
+in order to build an On solution
+we can use a stack to store each element's index
+and the result is the minus between them
+
 ```
 
 **代码：**
 
 ```python
-# 待补充
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        result = [0]*len(temperatures)
+        stack = []
+
+        for i in range(len(temperatures)):
+            print(f"------{i}-------")
+
+            if not stack:
+                stack.append(i)
+                print(f"stack:{stack}")
+
+            elif temperatures[i] <= temperatures[stack[-1]]:
+                stack.append(i)
+                print(f"stack:{stack}")
+
+            else:
+                print(f"i:{i} temperatures[i]:{temperatures[i]}"
+                f"stack[-1]:{stack[-1]}temperatures[stack[-1]]:{temperatures[stack[-1]]}")
+
+                while stack and temperatures[i] > temperatures[stack[-1]]:
+                    result[stack[-1]] = i-stack[-1]
+                    stack.pop()
+                    
+                    print(f"after pop : {stack}")
+
+                stack.append(i)
+                print(f"{stack}")
+
+
+        return result
+
 ```
 
 
